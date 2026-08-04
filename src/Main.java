@@ -4,5 +4,6 @@ class Main {
         manager.setTaskId(1);
 
         System.out.println(manager.getTaskId());
+
     }
 }
