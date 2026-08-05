@@ -9,7 +9,7 @@ public class Task {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    Task(int taskId, String taskDescription) {
+    public Task(int taskId, String taskDescription) {
         this.taskId = taskId;
         setTaskDescription(taskDescription);
         this.taskStatus = Status.TODO;

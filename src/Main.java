@@ -1,11 +1,9 @@
-package model;
-import Task.*;
+import model.Task;
 
-class Main {
+public class Main {
     public static void main(String[] args) {
-        Task manager = new Task();
-        manager.setTaskId(1);
-        System.out.println(manager.getTaskId());
-        System.out.println(manager.getTaskStatus());
+        Task t = new Task(1, "Buy bread");
+        System.out.println(t);
+        System.out.println(t.getTaskStatus());
     }
 }
