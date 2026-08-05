@@ -1,5 +1,7 @@
-enum Status {
-    todo,
-    in_progress,
-    done
+package model;
+
+public enum Status {
+    TODO,
+    IN_PROGRESS,
+    DONE
 }

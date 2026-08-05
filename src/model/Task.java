@@ -1,14 +1,20 @@
-import java.time.LocalDate;
+package model;
 
-class Task {
-    public int taskId;
+import java.time.LocalDateTime;
+
+public class Task {
+    private int taskId;
     private String taskDescription;
     private Status taskStatus;
-    private LocalDate createdAt;
-    private LocalDate updateAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
-    public void setTaskId(int taskId) {
+    Task(int taskId, String taskDescription) {
         this.taskId = taskId;
+        setTaskDescription(taskDescription);
+        this.taskStatus = Status.TODO;
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     public int getTaskId() {
@@ -16,7 +22,9 @@ class Task {
     }
 
     public void setTaskDescription(String taskDescription) {
-        this.taskDescription = taskDescription;
+        //validation for null cases
+        this.taskDescription = (taskDescription == null) ? "" : taskDescription.trim();
+        this.updatedAt = LocalDateTime.now();
     }
 
     public String getTaskDescription() {
@@ -25,25 +33,23 @@ class Task {
 
     public void setTaskStatus(Status taskStatus) {
         this.taskStatus = taskStatus;
+        this.updatedAt = LocalDateTime.now();
     }
 
     public Status getTaskStatus() {
         return taskStatus;
     }
 
-    public void setCreatedTaskAt(LocalDate createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDate getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setUpdatedTaskAt(LocalDate updatedAt) {
-        this.updateAt = updatedAt;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public LocalDate getUpdateAt() {
-        return updateAt;
+    @Override
+    public String toString() {
+        return "[" + taskId + "]" + " - " + taskDescription + " - " + taskStatus;
     }
 }
