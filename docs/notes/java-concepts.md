@@ -12,7 +12,13 @@ Initialize the object's states, make it ready and valid.
 - Ensure that the object is born consistent
 
 **Example of my code:**
-The Task constructor takes id and description, and sets status = TODO and the dates automatically.
+The **Task** constructor takes id and description, and sets status = TODO and the dates automatically.
 So every Task is born valid.
-Related: Default constructor, overload, this.
+
+
+The **TaskManager** constructor takes no parameters.
+But initialize the first id and creates the **Task List.**
+
+**Related:** Default constructor, overload, this.
+
 ---

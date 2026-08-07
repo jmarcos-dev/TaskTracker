@@ -12,7 +12,8 @@ public class TaskManager {
       value from the outside.
      */
     public TaskManager() {
-       //
+        taskNextid = 1;
+        Task taskList = new ArrayList<>();
     }
 
     public Task addTask(String taskDescription) {
