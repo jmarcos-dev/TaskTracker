@@ -22,3 +22,20 @@ But initialize the first id and creates the **Task List.**
 **Related:** Default constructor, overload, this.
 
 ---
+
+## Getters and Setters
+
+**What it is:** 
+Getters and Setters are used to protect data, especially in class creations.
+For each instance declared, a getter method returns its value, while the setters method modifies that value.
+
+**Used for:**
+Control how important variables are accessed directly. 
+Without getter/setter can allow unwanted side effects elsewhere in the code.
+
+**Example of my code:**
+The **Task** getters and setters allow me work setting the task id by TaskManager, also:
+- TaskDescription
+- TaskStatus 
+
+---
