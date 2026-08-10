@@ -13,7 +13,7 @@ public class TaskManager {
      */
     public TaskManager() {
         taskNextid = 1;
-        Task taskList = new ArrayList<>();
+        taskList = new ArrayList<>();
     }
 
     public Task addTask(String taskDescription) {
