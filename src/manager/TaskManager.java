@@ -1,15 +1,18 @@
-package model;
+package manager;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import model.Status;
+import model.Task;
 
 public class TaskManager {
     private int taskNextid;
     private List<Task> taskList;
 
-    /*When creating constructor, it only passes
-      parameters to what will receive
-      value from the outside.
+    /*
+     * When creating constructor, it only passes
+     * parameters to what will receive
+     * value from the outside.
      */
     public TaskManager() {
         taskNextid = 1;
